@@ -40,3 +40,24 @@ var locationTitle = document.createElement('h2');
 locationTitle.classList.add('location__title');
 locationTitle.textContent = '666 Spring St, New York, NY 10012';
 restaurantLocation.appendChild(locationTitle);
+var homeButton = document.getElementById('home');
+var menuButton = document.getElementById('menu');
+var contactButton = document.getElementById('contact');
+homeButton.addEventListener('click', function () {
+    heroTitle.textContent = 'Welcome to my website!';
+    heroSubtitle.textContent = 'This is a simple website created using TypeScript.';
+    hoursTitle.textContent = 'Hours';
+    locationTitle.textContent = '666 Spring St, New York, NY 10012';
+});
+menuButton.addEventListener('click', function () {
+    heroTitle.textContent = 'Menu';
+    heroSubtitle.textContent = 'Check out our delicious menu!';
+    hoursTitle.textContent = 'Menu';
+    locationTitle.textContent = 'Menu';
+});
+contactButton.addEventListener('click', function () {
+    heroTitle.textContent = 'Contact';
+    heroSubtitle.textContent = 'Get in touch with us!';
+    hoursTitle.textContent = 'Contact';
+    locationTitle.textContent = 'Contact';
+});

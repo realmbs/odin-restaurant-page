@@ -50,3 +50,26 @@ const locationTitle = document.createElement('h2') as HTMLHeadingElement;
 locationTitle.classList.add('location__title');
 locationTitle.textContent = '666 Spring St, New York, NY 10012';
 restaurantLocation.appendChild(locationTitle);
+
+const homeButton = document.getElementById('home') as HTMLAnchorElement;
+const menuButton = document.getElementById('menu') as HTMLAnchorElement;
+const contactButton = document.getElementById('contact') as HTMLAnchorElement;
+
+homeButton.addEventListener('click', () => {
+  heroTitle.textContent = 'Welcome to my website!';
+  heroSubtitle.textContent = 'This is a simple website created using TypeScript.';
+  hoursTitle.textContent = 'Hours';
+  locationTitle.textContent = '666 Spring St, New York, NY 10012';
+});
+menuButton.addEventListener('click', () => {
+  heroTitle.textContent = 'Menu';
+  heroSubtitle.textContent = 'Check out our delicious menu!';
+  hoursTitle.textContent = 'Menu';
+  locationTitle.textContent = 'Menu';
+});
+contactButton.addEventListener('click', () => {
+  heroTitle.textContent = 'Contact';
+  heroSubtitle.textContent = 'Get in touch with us!';
+  hoursTitle.textContent = 'Contact';
+  locationTitle.textContent = 'Contact';
+});
