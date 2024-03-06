@@ -1,1 +1,1 @@
-document.getElementById("content");
+(()=>{document.getElementById("top__nav");var e=document.getElementById("content"),n=(document.getElementById("footer"),document.createElement("div"));n.classList.add("hero"),n.innerHTML="\n  <h1>Restaurant</h1>\n  <p>lorem ipsum dolor sit amet</p>\n  ",e.appendChild(n);var t=document.createElement("div");t.classList.add("menu"),t.innerHTML="\n  <h2>Menu</h2>\n  <ul>\n    <li>Item 1</li>\n    <li>Item 2</li>\n    <li>Item 3</li>\n  </ul>\n  ",e.appendChild(t)})();

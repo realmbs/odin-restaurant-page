@@ -1,1 +1,11 @@
+var navBar = document.getElementById('top__nav');
 var content = document.getElementById('content');
+var footer = document.getElementById('footer');
+var hero = document.createElement('div');
+hero.classList.add('hero');
+hero.innerHTML = "\n  <h1>Restaurant</h1>\n  <p>lorem ipsum dolor sit amet</p>\n  ";
+content.appendChild(hero);
+var menu = document.createElement('div');
+menu.classList.add('menu');
+menu.innerHTML = "\n  <h2>Menu</h2>\n  <ul>\n    <li>Item 1</li>\n    <li>Item 2</li>\n    <li>Item 3</li>\n  </ul>\n  ";
+content.appendChild(menu);
