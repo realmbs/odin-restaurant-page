@@ -1,1 +1,2 @@
-console.log('test');
+const content = document.getElementById('content') as HTMLDivElement;
+

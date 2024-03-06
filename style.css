@@ -1,0 +1,50 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/* top nav */
+
+header, nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+li a {
+  text-decoration: none;
+}
+
+/* content */
+
+#content {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  background-color: rgba(255, 0, 0, 0.15);
+  padding-left: 10vw;
+  padding-right: 10vw;
+  min-height: 80vh;
+}
+
+/* footer */
+
+#footer > nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: auto
+}

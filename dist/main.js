@@ -1,1 +1,1 @@
-console.log("test");
+document.getElementById("content");
