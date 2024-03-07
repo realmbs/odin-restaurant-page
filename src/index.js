@@ -1,63 +1,45 @@
-var navBar = document.getElementById('top__nav');
 var content = document.getElementById('content');
-var footer = document.getElementById('footer');
 var hero = document.createElement('div');
 hero.classList.add('hero');
 content.appendChild(hero);
-var heroTitle = document.createElement('h1');
-heroTitle.classList.add('hero__title');
-heroTitle.textContent = 'Welcome to my website!';
-hero.appendChild(heroTitle);
-var heroSubtitle = document.createElement('p');
-heroSubtitle.classList.add('hero__subtitle');
-heroSubtitle.textContent = 'This is a simple website created using TypeScript.';
-hero.appendChild(heroSubtitle);
-var heroButton = document.createElement('button');
-heroButton.classList.add('hero__button');
-heroButton.textContent = 'Learn More';
-hero.appendChild(heroButton);
-var hoursOfOperation = document.createElement('div');
-hoursOfOperation.classList.add('hours__of__operation');
-content.appendChild(hoursOfOperation);
-var hoursTitle = document.createElement('h2');
-hoursTitle.classList.add('hours__title');
-hoursTitle.textContent = 'Hours';
-hoursOfOperation.appendChild(hoursTitle);
-var hoursList = document.createElement('ul');
-hoursList.classList.add('hours__list');
-hoursOfOperation.appendChild(hoursList);
-var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-days.forEach(function (day) {
-    var listItem = document.createElement('li');
-    listItem.classList.add('hours__list__item');
-    listItem.textContent = day;
-    hoursList.appendChild(listItem);
-});
-var restaurantLocation = document.createElement('div');
-restaurantLocation.classList.add('restaurant__location');
-content.appendChild(restaurantLocation);
-var locationTitle = document.createElement('h2');
-locationTitle.classList.add('location__title');
-locationTitle.textContent = '666 Spring St, New York, NY 10012';
-restaurantLocation.appendChild(locationTitle);
-var homeButton = document.getElementById('home');
+var title = document.createElement('h1');
+title.textContent = 'Restaurant Page';
+hero.appendChild(title);
+var descriptionText = document.createElement('p');
+descriptionText.textContent = 'Welcome to our restaurant! We serve the best food in town.';
+hero.appendChild(descriptionText);
+var secondary = document.createElement('div');
+secondary.classList.add('secondary');
+content.appendChild(secondary);
 var menuButton = document.getElementById('menu');
-var contactButton = document.getElementById('contact');
-homeButton.addEventListener('click', function () {
-    heroTitle.textContent = 'Welcome to my website!';
-    heroSubtitle.textContent = 'This is a simple website created using TypeScript.';
-    hoursTitle.textContent = 'Hours';
-    locationTitle.textContent = '666 Spring St, New York, NY 10012';
-});
+var menu = document.createElement('div');
+menu.classList.add('menu');
+secondary.appendChild(menu);
+var menuTitle = document.createElement('h2');
+menuTitle.textContent = 'Menu';
+menu.appendChild(menuTitle);
+var menuList = document.createElement('ul');
+menu.appendChild(menuList);
+var menuItems = [
+    'Pizza',
+    'Burger',
+    'Pasta',
+    'Salad',
+    'Soup',
+    'Dessert',
+];
 menuButton.addEventListener('click', function () {
-    heroTitle.textContent = 'Menu';
-    heroSubtitle.textContent = 'Check out our delicious menu!';
-    hoursTitle.textContent = 'Menu';
-    locationTitle.textContent = 'Menu';
+    menu.classList.toggle('menu-active');
+    menuButton.classList.toggle('menu-active');
+    title.textContent = menu.classList.contains('menu-active') ? 'Menu' : 'Restaurant Page';
+    descriptionText.textContent = menu.classList.contains('menu-active') ? 'Check out our menu!' : "Welcome\n  to our restaurant! We serve the best food in town.";
+    menuButton.textContent = menu.classList.contains('menu-active') ? 'Close' : 'Menu';
 });
-contactButton.addEventListener('click', function () {
-    heroTitle.textContent = 'Contact';
-    heroSubtitle.textContent = 'Get in touch with us!';
-    hoursTitle.textContent = 'Contact';
-    locationTitle.textContent = 'Contact';
+menuItems.forEach(function (item) {
+    var menuItem = document.createElement('li');
+    menuItem.textContent = item;
+    menuList.appendChild(menuItem);
 });
+var tertiary = document.createElement('div');
+tertiary.classList.add('tertiary');
+content.appendChild(tertiary);
