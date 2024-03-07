@@ -22,8 +22,9 @@
   text-decoration: none;
 }
 
-#top__nav a:hover {
-  color: yellow;
+.active {
+  border-radius: 6px;
+  background-color: black;
 }
 
 #top__nav ul {
@@ -43,8 +44,6 @@
   padding-left: 2rem;
   padding-right: 2rem;
 }
-
-
 
 /* footer */
 
